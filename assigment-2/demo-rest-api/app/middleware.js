@@ -4,7 +4,8 @@ const cors = require('cors')
 const middleware = [
     express.json(),
     morgan('dev'),
-    cors()
+    cors(),
+    express.static('public')
 ];
 
 module.exports = middleware;
