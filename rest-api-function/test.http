@@ -1,1 +1,4 @@
-GET http://localhost:4000/api/random?start=3&end=6
+GET http://localhost:4000/api/random?start=7&end=4
+
+###
+# GET http://localhost:4000/api/fakePerson?property=firstName,lastName

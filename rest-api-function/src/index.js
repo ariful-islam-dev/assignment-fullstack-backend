@@ -1,5 +1,6 @@
 const express = require("express");
 const { validNum } = require("./utils");
+const fs = require('fs')
 
 const app = express();
 
@@ -23,6 +24,23 @@ app.get("/api/random", (req, res) => {
     res.status(400).json(err.message);
   }
 });
+
+app.get('/api/fakePerson', (req, res)=>{
+  const property = req.query
+  // const data = fs.readFileSync('../fakePerson.json');
+  // const obj = JSON.parse(data);
+  // console.log(obj)
+
+  // const rand = Math.floor(Math.random()*100);
+  
+const person = Object.values(property)
+ console.log(person)
+ 
+  res.json({
+   msg: 'Get user data' 
+  })
+
+})
 
 
 
